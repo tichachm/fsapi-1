@@ -1,6 +1,6 @@
 <?php
 function __autoload($class_name) {
-    include 'classes/'.$class_name . '.php';
+    include dirname(__file__).'/../src/'.$class_name . '.php';
 }
 
 	/**
@@ -27,7 +27,7 @@ function __autoload($class_name) {
 	// get all known nodes and the allowed methods
 	$result = $fsapi->getrw();
 	// get all validation rules for known nodes
-	$result = $this->fsapi->getvalidation();
+	$result = $fsapi->getvalidation();
 
 
 	/**
